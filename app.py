@@ -209,7 +209,6 @@ with tab_gauge:
     track = Wedge((0, 0), outer_r, theta_start, theta_end,
                 width=outer_r - inner_r, facecolor=TRACK, edgecolor="none", zorder=1)
     ax.add_patch(track)
-
     span = (theta_start - theta_end) * pct
     theta1 = 240 + span
     theta2 = -170
@@ -217,7 +216,7 @@ with tab_gauge:
                 width=outer_r - inner_r, facecolor=FILL, edgecolor="none", zorder=2)
     ax.add_patch(fill)
 
-    ax.text(0, -0.02, f"{pct*100:.1f}%".replace(".", ","), ha="center", va="center", fontsize=44, color=TXT)
+    ax.text(0, -0.02, f"{pct*100:.1f}%".replace(".", ","), ha="center", va="center", fontsize=44, color=SUB, fontweight="bold")
     ax.text(-1.02, -0.25, fmt_k(electric), ha="left",  va="center", fontsize=13, color=SUB)
     ax.text(-1.02, -0.43, "Electric school buses", ha="left",  va="center", fontsize=11, color=SUB)
     ax.text( 1.02, -0.25, fmt_int(total),   ha="right", va="center", fontsize=13, color=SUB)
